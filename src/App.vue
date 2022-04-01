@@ -6,6 +6,7 @@
             <p>{{item.price}}</p>
             <p>{{item.publicDate}}</p>
             <img :src="item.image" alt="">
+            <div v-if="productIem.price => maxPrice">Expensive</div>
             <a @click="message('them vao gio hang')" href="">Them vao gio hang</a>
         </div>
         <p>San pham hot</p>
@@ -77,6 +78,9 @@
             hotProducts() {
                 return this.products.filter(product => product.hot);
             },
+            maxPrice() {
+                return  Math.min(...this.products.map(productIem => productIem.price))
+            }
         },
     };
 </script>
