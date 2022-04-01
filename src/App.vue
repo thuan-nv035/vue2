@@ -42,7 +42,7 @@
             },
 
             getNumber(number) {
-                if (this.operatorClicked == true) {
+                if (this.operatorClicked ==rue) {
                     this.display = ''
                     this.operatorClicked = false
                 }
