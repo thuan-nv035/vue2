@@ -1,15 +1,22 @@
 <template>
-    <div id="app">
-        <ListComponent></ListComponent>
+    <div>
+<!--        <div v-for = "(item, index) in products" :key="index">-->
+
+<!--        </div>-->
+        <ItemComponent :productsItem = "products"></ItemComponent>
+        <CheckComponent :productsItem = "products"></CheckComponent>
     </div>
 </template>
 
 <script>
-    import ListComponent from './components/ListComponent'
+    import ItemComponent from './ItemComponent'
+    import CheckComponent from "@/components/CheckComponent";
+
     export default {
-        name: 'App',
+        name: "ListComponent",
         components: {
-            ListComponent,
+            ItemComponent,
+            CheckComponent
         },
         data() {
             return {
@@ -33,10 +40,9 @@
                 checkId: null
             }
         },
-
     }
 </script>
 
-<style>
+<style scoped>
 
 </style>
