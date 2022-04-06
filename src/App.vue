@@ -1,15 +1,18 @@
 <template>
   <div id="app">
+      <myButton></myButton>
+      <mySelect></mySelect>
+      <ParentComponent></ParentComponent>
    </div>
 </template>
 
 <script>
 
-
+import ParentComponent from "./components/ParentComponent"
 export default {
   name: 'App',
   components: {
-
+      ParentComponent
   }
 }
 </script>
