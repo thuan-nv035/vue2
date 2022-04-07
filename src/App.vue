@@ -1,15 +1,17 @@
 <template>
   <div id="app">
+      <HomeComponent></HomeComponent>
    </div>
 </template>
 
 <script>
-
+    import HomeComponent from "./components/Home"
 
 export default {
+
   name: 'App',
   components: {
-
+      HomeComponent
   }
 }
 </script>
